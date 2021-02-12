@@ -11,6 +11,9 @@ I copied over the following experiments:
 
 The scripts for performing this renaming and moving are located in the Python file that is uploaded to this repository.
 
+I ran fastqc on one sample by inputting `fastqc ADL06_1_1.fq.gz`.
+This data file passed most metrics, but there were some overrepresented sequences, and the phred score began to fall off around 40bp in.
+
 This is the sample output when I type in `tree` in my home directory for the class:
 
 ```{bash}
