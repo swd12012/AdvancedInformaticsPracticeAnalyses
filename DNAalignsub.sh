@@ -23,8 +23,8 @@ samplename=`echo $prefix | sed -e "s/raw/bam/"`
 idname=`echo $prefix | cut -d "/" -f 2 | cut -d "_" -f 1`
 
 # alignments
-bwa mem -t 2 -M $ref ${prefix}_1.fq.gz ${prefix}_2.fq.gz | samtools view -bS - > $samplename.bam
-samtools sort $samplename.bam -o $samplename.sort.bam
+#bwa mem -t 2 -M $ref ${prefix}_1.fq.gz ${prefix}_2.fq.gz | samtools view -bS - > $samplename.bam
+#samtools sort $samplename.bam -o $samplename.sort.bam
 # GATK likes readgroups
-java -jar  /opt/apps/picard-tools/1.87/AddOrReplaceReadGroups.jar I=$samplename.sort.bam O=$samplename.RG.bam SORT_ORDER=coordinate RGPL=illumina RGPU=D109LACXX RGLB=Lib1 RGID=$idname RGSM=$idname VALIDATION_STRINGENCY=LENIENT
-samtools index $samplename.RG.bam.bamam.bambamm
+#java -jar  /opt/apps/picard-tools/1.87/AddOrReplaceReadGroups.jar I=$samplename.sort.bam O=$samplename.RG.bam SORT_ORDER=coordinate RGPL=illumina RGPU=D109LACXX RGLB=Lib1 RGID=$idname RGSM=$idname VALIDATION_STRINGENCY=LENIENT
+samtools index $samplename.RG.bam

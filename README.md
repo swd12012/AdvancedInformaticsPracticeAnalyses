@@ -858,3 +858,19 @@ This is the sample output when I type in `tree` in my home directory for the cla
 
 8 directories, 828 files
 ```
+
+#### Week 7
+
+I indexed the genome with the following algorithms:
+
+* bwa-mem
+* samtools
+* picard
+* hisat2
+
+I aligned the DNAseq and ATACseq data to the genome with:
+
+* bwa
+* picard
+
+I aligned the RNAseq with `hisat2`.
