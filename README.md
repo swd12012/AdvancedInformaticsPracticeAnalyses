@@ -868,9 +868,34 @@ I indexed the genome with the following algorithms:
 * picard
 * hisat2
 
-I aligned the DNAseq and ATACseq data to the genome with:
+###### DNAseq
+
+I aligned the DNAseq data to the genome with:
 
 * bwa
 * picard
 
-I aligned the RNAseq with `hisat2`.
+They were placed in a directory named `bam`. Each file was also sorted and indexed. For example, for the `ADL06_1` sample, I had the following ouputs:
+
+* `ADL06_1.bam`
+* `ADL06_1.RG.bam`
+* `ADL06_1.RG.bam.bai`
+* `ADL06_1.sort.bam`
+
+##### ATACseq
+
+The ATACseq data was also aligned to the genome with `bwa` and `picard`. The bam files were placed in a directory `bam` separate from the raw data. Each bam file was also sorted and indexed. For example, for the `P004` sample:
+
+* `P004.bam`
+* `P004.RG.bam`
+* `P004.RG.bam.bai`
+* `P004.sort.bam`
+
+##### RNAseq
+
+I aligned a subset of the RNAseq data (samples 1-9, 93-102) with `hisat2`. The alignments were saved as `sam` files in a separate `bam` directory so I converted them to `bam` with `samtools`, sorted, and indexed, so each sample has the following outputs:
+
+* `1.sam`
+* `1.bam`
+* `1.sorted.bam`
+* `1.sorted.bam.bai`
