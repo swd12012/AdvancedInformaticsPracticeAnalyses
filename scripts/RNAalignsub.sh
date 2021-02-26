@@ -35,10 +35,10 @@ file="shortRNAseq.prefixes.txt"
 prefix=`head -n $SLURM_ARRAY_TASK_ID  $file | tail -n 1`
 samplename=`echo $prefix | sed -e "s/raw/bam/"`
 
-#hisat2 -p 2 -x $ref -1 ${prefix}_R1.fq.gz -2 ${prefix}_R2.fq.gz -S ${samplename}.sam
+hisat2 -p 2 -x $ref -1 ${prefix}_R1.fq.gz -2 ${prefix}_R2.fq.gz -S ${samplename}.sam
 #samtools view -bS ${samplename}.sam > ${samplename}.bam
-samtools sort ${samplename}.bam -o ${samplename}.sorted.bam
-samtools index ${samplename}.sorted.bam
+#samtools sort ${samplename}.bam -o ${samplename}.sorted.bam
+#samtools index ${samplename}.sorted.bam
 
 
 
