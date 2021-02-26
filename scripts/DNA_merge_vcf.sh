@@ -10,5 +10,5 @@ module load gatk/4.1.9.0
 ref="ref/dmel-all-chromosome-r6.13.fasta"
 
 # another dirty shell trick, you can't printf -V...
-/opt/apps/gatk/4.1.9.0/gatk CombineGVCFs -R $ref $(printf -- '-V %s ' DNAseq/out/*.g.vcf.gz) -O allsample.g.vcf.gz
+/opt/apps/gatk/4.1.9.0/gatk CombineGVCFs -R $ref $(printf -- '-V %s ' DNAseq/out/*.g.vcf.gz) -O DNAseq/out/allsample.g.vcf.gz
 ## and merge gVCFs
