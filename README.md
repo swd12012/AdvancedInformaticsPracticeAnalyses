@@ -899,3 +899,15 @@ I aligned a subset of the RNAseq data (samples 1-9, 93-102) with `hisat2`. The a
 * `1.bam`
 * `1.sorted.bam`
 * `1.sorted.bam.bai`
+
+#### Week 8
+
+##### DNAseq
+
+I ran the scripts to merge the lanes within the samples, merge the vcfs into a single vcf, and called snps using gatk. Scripts can be found [here](https://github.com/swd12012/AdvancedInformaticsPracticeAnalyses/tree/main/scripts).
+The scripts were mostly unchanged from the provided examples, except for some different directory structure linking.
+
+##### RNAseq
+
+I installed DESeq2 via both R and conda and then counted reads with `featureCounts`.
+It reported that only about 4-5% of reads were aligned, though we discussed in the Discord why that was.
