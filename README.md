@@ -911,3 +911,19 @@ The scripts were mostly unchanged from the provided examples, except for some di
 
 I installed DESeq2 via both R and conda and then counted reads with `featureCounts`.
 It reported that only about 4-5% of reads were aligned, though we discussed in the Discord why that was.
+
+#### Week 9
+
+##### ATACseq
+
+I ran a script to take a sorted, indexed bam and run it through the pipeline to look at "genome coverage" for all of my ATACseq files. For each file, the output was a set of files, eg:
+
+* P051.bam
+* P051.bw
+* P051.coverage
+* P051.maj
+* P051.sort.bam
+* P051.sort.bam.bai
+* P051.sort.coverage
+
+I uploaded P060.bw onto [cyverse](https://data.cyverse.org/dav-anon/iplant/home/swd12012/P060.bw) and uploaded it to UCSC Genome Browser on a [custom track](https://data.cyverse.org/dav-anon/iplant/home/swd12012/P060.bw). 

@@ -11,7 +11,7 @@ module load bcftools/1.10.2
 module load java/1.8.0
 module load picard-tools/1.87
 
-ls ATACseq/raw/*_R1.fq.gz | sed 's/_R1.fq.gz//' > ATAC_prefixes.txt 
+#ls ATACseq/raw/*_R1.fq.gz | sed 's/_R1.fq.gz//' > ATAC_prefixes.txt 
 
 # or pass the file name to the shell script, how would I do this?
 file="ATAC_prefixes.txt"
@@ -26,5 +26,5 @@ idname=`echo $prefix | cut -d "/" -f 3`
 bwa mem -t 2 -M $ref ${prefix}_R1.fq.gz ${prefix}_R2.fq.gz | samtools view -bS - > $samplename.bam
 samtools sort $samplename.bam -o $samplename.sort.bam
 # GATK likes readgroups
-java -jar  /opt/apps/picard-tools/1.87/AddOrReplaceReadGroups.jar I=$samplename.sort.bam O=$samplename.RG.bam SORT_ORDER=coordinate RGPL=illumina RGPU=D109LACXX RGLB=Lib1 RGID=$idname RGSM=$idname VALIDATION_STRINGENCY=LENIENT
-samtools index $samplename.RG.bam
+#java -jar  /opt/apps/picard-tools/1.87/AddOrReplaceReadGroups.jar I=$samplename.sort.bam O=$samplename.RG.bam SORT_ORDER=coordinate RGPL=illumina RGPU=D109LACXX RGLB=Lib1 RGID=$idname RGSM=$idname VALIDATION_STRINGENCY=LENIENT
+samtools index $samplename.sort.bam
