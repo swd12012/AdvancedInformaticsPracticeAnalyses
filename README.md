@@ -930,7 +930,7 @@ I uploaded P060.bw onto [cyverse](https://data.cyverse.org/dav-anon/iplant/home/
 
 ##### RNAseq
 
-I passed the fly counts files through the DESeq2 analysis pipeline and created the following plots, using Dr. Long's code pretty much exactly:
+I passed the fly counts files through the DESeq2 analysis pipeline and created the following [plots](https://github.com/swd12012/AdvancedInformaticsPracticeAnalyses/tree/main/plots), using Dr. Long's [code](https://github.com/swd12012/AdvancedInformaticsPracticeAnalyses/blob/main/scripts/DESeq2.R) pretty much exactly:
 
 * MA plot - log fold change over mean of normalized counts
 * dispest - dispersion estimate over mean of normalized counts
