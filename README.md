@@ -927,3 +927,13 @@ I ran a script to take a sorted, indexed bam and run it through the pipeline to 
 * P051.sort.coverage
 
 I uploaded P060.bw onto [cyverse](https://data.cyverse.org/dav-anon/iplant/home/swd12012/P060.bw) and uploaded it to UCSC Genome Browser on a [custom track](https://data.cyverse.org/dav-anon/iplant/home/swd12012/P060.bw). 
+
+##### RNAseq
+
+I passed the fly counts files through the DESeq2 analysis pipeline and created the following plots, using Dr. Long's code pretty much exactly:
+
+* MA plot - log fold change over mean of normalized counts
+* dispest - dispersion estimate over mean of normalized counts
+* frequency estimate - histogram of frequency versus p value and expression
+* PCA - principal component analysis by group (e.g. by tissue)
+* heatmap - heatmap of top differentially expressed genes by group (e.g. tissue)
